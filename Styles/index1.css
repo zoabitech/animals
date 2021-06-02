@@ -4,13 +4,12 @@
   padding: 0;
 }
 h1 {
-  /* margin: 1em auto; */
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: rgb(1, 35, 73);
 }
 h2 {
-  font-size: 2rem;
+  font-size: 20px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: rgb(1, 35, 73);
@@ -18,7 +17,7 @@ h2 {
 p {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 2rem;
+  font-size: 17px;
   margin: 2em auto;
   color: rgb(1, 35, 73);
 }
@@ -33,10 +32,8 @@ p {
   font-weight: 900;
   justify-content: center;
 }
-.my-grid .he {
+.he {
   grid-area: header;
-  border: 1px solid red;
-  justify-items: center;
 }
 .my-grid nav {
   grid-area: nav;
@@ -78,13 +75,6 @@ p {
 .grid-wrapper-example > * {
   background-color: rgb(1, 35, 73);
 }
-.post_content {
-  text-align: right;
-}
-.post_content {
-  padding: 0 0 30px;
-  word-break: break-word;
-}
 @media screen and (max-width: 600px) {
   main .main {
     display: flex;
@@ -107,10 +97,8 @@ p {
   h2 {
     font-size: 1rem;
   }
-  /* .wp-caption img {
-    display: flex;
-    width: fit-content;
-    margin: 0 auto;
-  } */
- 
+  .inner-title {
+    text-align: center;
+    font-size: 20px;
+  }
 }
