@@ -93,4 +93,7 @@ input:checked {
     display: flex;
     padding: 0;
   }
+  .donate{
+    margin-bottom: 1rem;
+  }
 }

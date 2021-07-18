@@ -78,7 +78,7 @@ body {
   top: 7px;
 }
 
-.nav {
+.bar_tap {
   position: absolute;
   text-align: left;
   top: 100%;
@@ -90,18 +90,18 @@ body {
   transition: transform 400ms ease-in-out;
 }
 
-.nav ul {
+.bar_tap ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.nav li {
+.bar_tap li {
   margin-bottom: 1em;
   margin-left: 1em;
 }
 
-.nav a {
+.bar_tap a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
@@ -110,7 +110,7 @@ body {
   transition: opacity 150ms ease-in-out;
 }
 
-.nav a:hover {
+.bar_tap a:hover {
   border-radius: 10px;
   padding: 0.5rem;
   color: #fff;
@@ -144,7 +144,7 @@ body {
     grid-column: 2 / 3;
   }
 
-  .nav {
+  .bar_tap {
     all: unset;
     position: relative;
     text-align: left;
@@ -159,16 +159,16 @@ body {
     align-items: center;
   }
 
-  .nav ul {
+  .bar_tap ul {
     display: flex;
   }
 
-  .nav li {
+  .bar_tap li {
     margin-left: 3em;
     margin-bottom: 0;
   }
 
-  .nav a {
+  .bar_tap a {
     opacity: 1;
     position: relative;
   }
