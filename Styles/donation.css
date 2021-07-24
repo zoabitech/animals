@@ -82,6 +82,7 @@ input:checked {
   color: rgba(189, 144, 86, 1);
   font-size: 15px;
 }
+/*media design start*/
 @media screen and (max-width: 600px) {
   .container {
     display: flex;
