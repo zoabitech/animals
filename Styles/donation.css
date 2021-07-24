@@ -28,7 +28,6 @@
 }
 input,
 label,
-.span,
 select {
   padding: 0.75rem;
 }
@@ -41,7 +40,8 @@ input {
 input:checked {
   border: 2px solid red;
 }
-.choice {
+.choice,
+.agreement {
   font-size: 15px;
 }
 .privacy {
@@ -93,7 +93,14 @@ input:checked {
     display: flex;
     padding: 0;
   }
-  .donate{
+  .donate {
     margin-bottom: 1rem;
+  }
+  .second-title {
+    font-size: 1rem;
+    margin: 1rem;
+  }
+  .agreem {
+    margin: 1rem;
   }
 }
