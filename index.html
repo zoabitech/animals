@@ -1,139 +1,212 @@
 <!-- This is the index page -->
-<!DOCTYPE html >
-<html lang="he"> 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Styles/main.css">
-    <link rel="stylesheet" href="./Styles/index.css">
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/main.css" />
+    <link rel="stylesheet" href="./Styles/index.css" />
     <title>index</title>
-</head>
-<body>
-  <!-- Creating the header -->
-<header class="header">
-  <h1 class="logo"><a href="./index.html"><img src="./logo/logo-01.png" alt="logo"></a></h1>
-  <input type="checkbox" id="nav-toggle" class="nav-toggle">
-  <nav class="bar_tap">
-    <ul>
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./grid.html">Grid</a></li>
-      <li><a href="./flex.html">Flex</a></li>
-      <li><a href="./donation.html">Donation</a></li>
-    </ul>
-  </nav>
-  <label for="nav-toggle" class="nav-toggle-label">
-    <span class="span1"></span>
-  </label>
-</header>
-<!-- Creating the main of the index page -->
+  </head>
+  <body>
+    <!-- Creating the header -->
+    <header class="header">
+      <h1 class="logo">
+        <a href="./index.html"><img src="./logo/logo-01.png" alt="logo" /></a>
+      </h1>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <nav class="bar_tap">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./grid.html">Grid</a></li>
+          <li><a href="./flex.html">Flex</a></li>
+          <li><a href="./donation.html">Donation</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span class="span1"></span>
+      </label>
+    </header>
+    <!-- Creating the main of the index page -->
     <main dir="rtl">
       <div class="main">
         <h1 class="title">קצת הסבר על CSS Grid && CSS Flex?</h1>
         <p>
-          CSS Grid (ולפעמים נאמר פשוט Grid בשביל הנוחות) הוא מערכת דו מימדית המאפשרת יצירת עימוד מבוסס Grid. 
-          המטרה לשמה נוצר היא להקל עלינו ליצור Layouts וממשקי משתמש מורכבים, עם כמה שפחות סרבול בקוד.</p>
-          <p>הקונספט המרכזי מאחורי CSS Grid הוא מתודה המאפשרת לנו ליצור מבנה בצורת גריד אשר מתואר ברמת ה CSS ולא ברמת ה HTML. הוא עוזר לנו ליצור עימודים היכולים להיות מוגדרים מחדש באמצעות 
-            Media Queries ולהתאים עצמם לקונטקסט.</p>
-            <p>
-              השימוש ב CSS Grid מאפשר הפרדה בין סדר האלמנטים ב HTML לבין הרפרזנטציה הויזואלית שלהם על המסך. כמעצבים, זה אומר שאתם חופשיים לשנות מיקום של אלמנטים בעמוד בהתאם לצורך בגדלי המסכים השונים ולא תאלצו להתפשר על מבנה העמוד בעיצוב הריספונסיבי שלכם מפאת סדר הופעת האלמנטים ב HTML,
-               כלומר המיקום של אלו ב markup עצמו.
-            </p>
-            <p>די פשוט לגרום ל Grid להתאים עצמו לשטח פנוי על המסך. מאחר וכל אלמנט תופס איזור מסויים ב Grid, לא קיים סיכון שאלמנטים יחפפו אחד את השני מפאת שינויים בגודל הטקסט, תוכן ארוך מהצפוי
-               וכדומה.</p>
-               <p>אגב CSS תמיד היה שם בשבילנו עבור עימוד ומתווה, אך מעולם לא עשה עבודה טובה בהקשר. בתחילה השתמשנו בטבלאות, ואז ב Floats ואז ב Inline Blocking וכדומה, אך כל המתודות האלו היו סוג של אילתורים ולא כללו פונקציונליות מאד חשובה
-                 , לדוגמה יישור אנכי של אלמנטים, או פריסה אוטומטית של אלמנטים ב Container מסויים.</p>
-                 <p>Flexbox מאד עזרה לנו במקרים אלו כשהגיחה לעולם, אך זו נועדה ומתאימה יותר עבור עימוד חד מימדי, כלומר שורה או עמודה בלבד, ופחות עבור עימוד ומתווה דו מימדי המורכב מעמודות ושורות יחד.</p>
-                 <p>
-                  תכף נסביר את הכוונה אז השארו איתנו, לבינתיים בואו נסכם כי Grid הוא מודול ה CSS הראשון שנוצר בכדי לפתור ספציפית את ענייני העימוד שכולנו אילתרנו עד לא מזמן כאשר פיתחנו אתרים…
-                 </p>
-                 <h1>ההבדל בין CSS Grid ל Flexbox</h1>
-                 <p>כפי שציינו קודם לכן, Flexbox נועד לעימוד חד מימדי ו Grid עבור עימוד דו מימדי. הכוונה היא שאם אתם מעמידים מספר אלמנטים בכיוון אחד,
-                    כלומר מספר אלמנטים בשורה או עמודה אחת, אז עליכם להשתמש, או בעצם נכון יותר להשתמש ב Flexbox.</p>
-                    <p>Flexbox תאפשר לכם גמישות רבה יותר במקרה זה מאשר CSS Grid,
-                       היא תדרוש פחות קוד ותהיה אף קלה יותר לתחזוקה.</p>
-                       <h2>דוגמה לעימוד חד מימדי:</h2>
-                       <!-- An example for the flexbox layout -->
-                       <div class="flex-example">
-                         <div>Element</div>
-                         <div>Element</div>
-                         <div>Element</div>
-                        </div>
-                       <p>לעומת זאת –
-                         אם אתם מתכוונים ליצור מבנה כלשהו בשני מימדים, כלומר גם עמודות וגם שורות, מומלץ ונכון כנראה יהיה להשתמש ב CSS Grid בכדי לבצע זאת.</p>
-                         <h2>דוגמה לעימוד דו מימדי:</h2>
-                         <!-- An example for the grid layout -->
-                         <div class="my-grid grid-wrapper-example">
-                           <header class="he">header</header>
-                           <nav>nav</nav>
-                           <section>section</section>
-                           <aside>aside</aside>
-                           <footer>footer</footer>
-                          </div>
-                          <div>
-                        <p>במקרה זה – CSS Grid תאפשר גמישות רבה יותר, תגרום לכך שה Markup יהיה קומפקטי יותר והקוד יהיה הרבה יותר פשוט לתחזוקה. כמובן שאתם יכולים לשלב בין השניים ואף רצוי. בדוגמה האחרונה, יהיה נכון ליצור Grid עבור העימוד או המבנה עצמו ולהשתמש ב Flexbox
-                           ליישור התוכן בתוך ה Header.</p>
-                        </div>
-                        <div class="post_content">
-                          <p>מאז ומתמיד השימוש בגריד היה חלק בלתי נפרד מעולם העיצוב ופיתוח האתרים. כמפתחי Frontend, לבטח נתקלתם באתרים הבנויים על CSS Framework כלשהו דוגמת Bootstrap, Foundation ואחרים, המאפשרים (בין היתר) שימוש בקלאסים מוכנים ליצירת גריד הבנוי משורות ועמודות.</p>
-                          <p>אך כרוב המפתחים כמדומני, גם אני מעדיף להמנע כמה שניתן מתלות בספריות ונכסים חיצוניים כשאני מפתח אתר. ואם בכל זאת החלטתי להשתמש ב framework כזה או אחר, סביר להניח כי הדבר היחיד בו אעזר הוא ה CSS המתייחס לגריד עצמו, כלומר החלק שמספק את אפשרויות העימוד בלבד.</p>
-                          <p>אך אם בחרנו ליצור את אותם עימודים, את אותו מתווה (layout) או גריד בעצמינו – מהי הדרך הקלה והנכונה לעשות זאת? כיצד אנו יכולים למקם, ליישר ולסדר אלמנטים בקונטיינר כלשהו בקלות ובמהירות?</p>
-                          <p><strong>Flexbox (פלקסבוקס)</strong> היא כמעט תמיד התשובה. Flexbox מספקת מענה מצויין ליצירת מתווה, לבטח כשמדובר על מתווה חד מימדי, כלומר או שורה או עמודה. זאת לעומת CSS Grid אותו כולנו אוהבים המתאים יותר למתווה דו מימדי – כלומר גריד או מתווה של שורות ועמודות יחד.</p>
-                          <h2 id="title_0">מה זה Flexbox – מבט כללי</h2>
-                          <p>המודל של Flexbox מציג שני סוגים של ״קופסאות״ – האחד הוא <strong>Flex Container</strong> (קונטיינר מסוג Flex) והשני הוא <strong>Flex Item</strong> (ילד ישיר – אלמנט הנמצא בתוך אותו קונטיינר).</p>
-                          <p>ניתן לומר כי באופן כללי תפקידו של אותו ה Flex Container הוא לקבץ מספר Flex Items יחד ולקבוע כיצד אלו ממוקמים לאורך הצירים של הקונטיינר.</p>
-                            <p>Flexobox מאפשרת לבצע מניפולציות ישירות על אותם Flex Items (עוד על כך בהמשך), אך במרבית המקרים יהיה זה תפקידו של Flex Container לקבוע את המתווה.</p>
-                            <p>על ידי הוספת התכונה <code>display : flex</code> לאלמנט כלשהו, יהפוך זה מעשית ל Flex Container, והילדים <strong>הישירים</strong> של זה יהפכו <strong>Flex Items</strong> המסודרים כברירת מחדל בשורה.
-                            </p>
-                            </div>
-                            </div>
-
+          CSS Grid (ולפעמים נאמר פשוט Grid בשביל הנוחות) הוא מערכת דו מימדית
+          המאפשרת יצירת עימוד מבוסס Grid. המטרה לשמה נוצר היא להקל עלינו ליצור
+          Layouts וממשקי משתמש מורכבים, עם כמה שפחות סרבול בקוד.
+        </p>
+        <p>
+          הקונספט המרכזי מאחורי CSS Grid הוא מתודה המאפשרת לנו ליצור מבנה בצורת
+          גריד אשר מתואר ברמת ה CSS ולא ברמת ה HTML. הוא עוזר לנו ליצור עימודים
+          היכולים להיות מוגדרים מחדש באמצעות Media Queries ולהתאים עצמם
+          לקונטקסט.
+        </p>
+        <p>
+          השימוש ב CSS Grid מאפשר הפרדה בין סדר האלמנטים ב HTML לבין הרפרזנטציה
+          הויזואלית שלהם על המסך. כמעצבים, זה אומר שאתם חופשיים לשנות מיקום של
+          אלמנטים בעמוד בהתאם לצורך בגדלי המסכים השונים ולא תאלצו להתפשר על מבנה
+          העמוד בעיצוב הריספונסיבי שלכם מפאת סדר הופעת האלמנטים ב HTML, כלומר
+          המיקום של אלו ב markup עצמו.
+        </p>
+        <p>
+          די פשוט לגרום ל Grid להתאים עצמו לשטח פנוי על המסך. מאחר וכל אלמנט
+          תופס איזור מסויים ב Grid, לא קיים סיכון שאלמנטים יחפפו אחד את השני
+          מפאת שינויים בגודל הטקסט, תוכן ארוך מהצפוי וכדומה.
+        </p>
+        <p>
+          אגב CSS תמיד היה שם בשבילנו עבור עימוד ומתווה, אך מעולם לא עשה עבודה
+          טובה בהקשר. בתחילה השתמשנו בטבלאות, ואז ב Floats ואז ב Inline Blocking
+          וכדומה, אך כל המתודות האלו היו סוג של אילתורים ולא כללו פונקציונליות
+          מאד חשובה , לדוגמה יישור אנכי של אלמנטים, או פריסה אוטומטית של אלמנטים
+          ב Container מסויים.
+        </p>
+        <p>
+          Flexbox מאד עזרה לנו במקרים אלו כשהגיחה לעולם, אך זו נועדה ומתאימה
+          יותר עבור עימוד חד מימדי, כלומר שורה או עמודה בלבד, ופחות עבור עימוד
+          ומתווה דו מימדי המורכב מעמודות ושורות יחד.
+        </p>
+        <p>
+          תכף נסביר את הכוונה אז השארו איתנו, לבינתיים בואו נסכם כי Grid הוא
+          מודול ה CSS הראשון שנוצר בכדי לפתור ספציפית את ענייני העימוד שכולנו
+          אילתרנו עד לא מזמן כאשר פיתחנו אתרים…
+        </p>
+        <h1>ההבדל בין CSS Grid ל Flexbox</h1>
+        <p>
+          כפי שציינו קודם לכן, Flexbox נועד לעימוד חד מימדי ו Grid עבור עימוד דו
+          מימדי. הכוונה היא שאם אתם מעמידים מספר אלמנטים בכיוון אחד, כלומר מספר
+          אלמנטים בשורה או עמודה אחת, אז עליכם להשתמש, או בעצם נכון יותר להשתמש
+          ב Flexbox.
+        </p>
+        <p>
+          Flexbox תאפשר לכם גמישות רבה יותר במקרה זה מאשר CSS Grid, היא תדרוש
+          פחות קוד ותהיה אף קלה יותר לתחזוקה.
+        </p>
+        <h2>דוגמה לעימוד חד מימדי:</h2>
+        <!-- An example for the flexbox layout -->
+        <div class="flex-example">
+          <div>Element</div>
+          <div>Element</div>
+          <div>Element</div>
+        </div>
+        <p>
+          לעומת זאת – אם אתם מתכוונים ליצור מבנה כלשהו בשני מימדים, כלומר גם
+          עמודות וגם שורות, מומלץ ונכון כנראה יהיה להשתמש ב CSS Grid בכדי לבצע
+          זאת.
+        </p>
+        <h2>דוגמה לעימוד דו מימדי:</h2>
+        <!-- An example for the grid layout -->
+        <div class="my-grid grid-wrapper-example">
+          <header class="he">header</header>
+          <nav>nav</nav>
+          <section>section</section>
+          <aside>aside</aside>
+          <footer>footer</footer>
+        </div>
+        <div>
+          <p>
+            במקרה זה – CSS Grid תאפשר גמישות רבה יותר, תגרום לכך שה Markup יהיה
+            קומפקטי יותר והקוד יהיה הרבה יותר פשוט לתחזוקה. כמובן שאתם יכולים
+            לשלב בין השניים ואף רצוי. בדוגמה האחרונה, יהיה נכון ליצור Grid עבור
+            העימוד או המבנה עצמו ולהשתמש ב Flexbox ליישור התוכן בתוך ה Header.
+          </p>
+        </div>
+        <div class="post_content">
+          <p>
+            מאז ומתמיד השימוש בגריד היה חלק בלתי נפרד מעולם העיצוב ופיתוח
+            האתרים. כמפתחי Frontend, לבטח נתקלתם באתרים הבנויים על CSS Framework
+            כלשהו דוגמת Bootstrap, Foundation ואחרים, המאפשרים (בין היתר) שימוש
+            בקלאסים מוכנים ליצירת גריד הבנוי משורות ועמודות.
+          </p>
+          <p>
+            אך כרוב המפתחים כמדומני, גם אני מעדיף להמנע כמה שניתן מתלות בספריות
+            ונכסים חיצוניים כשאני מפתח אתר. ואם בכל זאת החלטתי להשתמש ב
+            framework כזה או אחר, סביר להניח כי הדבר היחיד בו אעזר הוא ה CSS
+            המתייחס לגריד עצמו, כלומר החלק שמספק את אפשרויות העימוד בלבד.
+          </p>
+          <p>
+            אך אם בחרנו ליצור את אותם עימודים, את אותו מתווה (layout) או גריד
+            בעצמינו – מהי הדרך הקלה והנכונה לעשות זאת? כיצד אנו יכולים למקם,
+            ליישר ולסדר אלמנטים בקונטיינר כלשהו בקלות ובמהירות?
+          </p>
+          <p>
+            <strong>Flexbox (פלקסבוקס)</strong> היא כמעט תמיד התשובה. Flexbox
+            מספקת מענה מצויין ליצירת מתווה, לבטח כשמדובר על מתווה חד מימדי,
+            כלומר או שורה או עמודה. זאת לעומת CSS Grid אותו כולנו אוהבים המתאים
+            יותר למתווה דו מימדי – כלומר גריד או מתווה של שורות ועמודות יחד.
+          </p>
+          <h2 id="title_0">מה זה Flexbox – מבט כללי</h2>
+          <p>
+            המודל של Flexbox מציג שני סוגים של ״קופסאות״ – האחד הוא
+            <strong>Flex Container</strong> (קונטיינר מסוג Flex) והשני הוא
+            <strong>Flex Item</strong> (ילד ישיר – אלמנט הנמצא בתוך אותו
+            קונטיינר).
+          </p>
+          <p>
+            ניתן לומר כי באופן כללי תפקידו של אותו ה Flex Container הוא לקבץ
+            מספר Flex Items יחד ולקבוע כיצד אלו ממוקמים לאורך הצירים של
+            הקונטיינר.
+          </p>
+          <p>
+            Flexobox מאפשרת לבצע מניפולציות ישירות על אותם Flex Items (עוד על כך
+            בהמשך), אך במרבית המקרים יהיה זה תפקידו של Flex Container לקבוע את
+            המתווה.
+          </p>
+          <p>
+            על ידי הוספת התכונה <code>display : flex</code> לאלמנט כלשהו, יהפוך
+            זה מעשית ל Flex Container, והילדים <strong>הישירים</strong> של זה
+            יהפכו <strong>Flex Items</strong> המסודרים כברירת מחדל בשורה.
+          </p>
+        </div>
+      </div>
     </main>
     <!-- Creating the footer -->
     <footer class="footer">
       <div class="l-footer">
-      <h1>
-      <a href="#"><img src="./logo/logo-01.png" alt="logo"></a></h1>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam atque recusandae in sit sunt molestiae aliquid fugit. Mollitia eaque tempore iure sit nobis? Vitae nemo, optio maiores numquam quis recusandae.</p>
+        <h1>
+          <a href="#"><img src="./logo/logo-01.png" alt="logo" /></a>
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+          atque recusandae in sit sunt molestiae aliquid fugit. Mollitia eaque
+          tempore iure sit nobis? Vitae nemo, optio maiores numquam quis
+          recusandae.
+        </p>
       </div>
       <ul class="r-footer">
-      <li>
-        <h2>
-      Social</h2>
-      <ul class="box">
-      <li><a href="#">Facebook</a></li>
-      <li><a href="#">Twitter</a></li>
-      <li><a href="#">Pinterest</a></li>
-      <li><a href="#">Dribbble</a></li>
-      </ul>
-      </li>
-      <li class="features">
-        <h2>
-      Information</h2>
-      <ul class="box h-box">
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Pricing</a></li>
-      <li><a href="#">Sales</a></li>
-      <li><a href="#">Tickets</a></li>
-      <li><a href="#">Certifications</a></li>
-      <li><a href="#">Customer Service</a></li>
-      </ul>
-      </li>
-      <li>
-        <h2>
-      Legal</h2>
-      <ul class="box">
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">Contract</a></li>
-      </ul>
-      </li>
+        <li>
+          <h2>Social</h2>
+          <ul class="box">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">Dribbble</a></li>
+          </ul>
+        </li>
+        <li class="features">
+          <h2>Information</h2>
+          <ul class="box h-box">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Sales</a></li>
+            <li><a href="#">Tickets</a></li>
+            <li><a href="#">Certifications</a></li>
+            <li><a href="#">Customer Service</a></li>
+          </ul>
+        </li>
+        <li>
+          <h2>Legal</h2>
+          <ul class="box">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contract</a></li>
+          </ul>
+        </li>
       </ul>
       <div class="b-footer">
-      <p>
-      All rights reserved by ©CompanyName 2021 </p>
+        <p>All rights reserved by ©CompanyName 2021</p>
       </div>
-      </footer>
-        
-</body>
+    </footer>
+  </body>
 </html>

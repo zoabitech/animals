@@ -1,159 +1,193 @@
 <!-- This is the form page -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Styles/main.css">
-    <link rel="stylesheet" href="./Styles/donation.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/main.css" />
+    <link rel="stylesheet" href="./Styles/donation.css" />
     <title>Donation</title>
-</head>
-<body>
-  <!-- Creating the header (nav bar and logo) -->
-  <header class="header">
-    <h1 class="logo"><a href="./index.html"><img src="./logo/logo-01.png" alt="logo"></a></h1>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <nav class="bar_tap">
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./grid.html">Grid</a></li>
-        <li><a href="./flex.html">Flex</a></li>
-        <li><a href="./donation.html">Donation</a></li>
-      </ul>
-    </nav>
-    <label for="nav-toggle" class="nav-toggle-label">
-      <span class="span1"></span>
-    </label>
-  </header>
-  <!-- Creating the form -->
-  <main class="container">
-    <h1 class="title">Donation Form</h1>
-     <form class="donation-form">
-      <h1 class="second-title">Full Name *</h1>
-      <div class="form-row">
-          <p>
-            <input type="text" name="fname" required maxlength="15" placeholder="First Name">
-            <input type="text" name="lname" required maxlength="15" placeholder="Last Name">
-          </p>
-      </div>
-      <h1 class="second-title">E-mail *</h1>
-      <div class="form-row">
-        <p>
-          <input type="email" name="email" required placeholder="username@example.com">
-        </p>
-      </div>
-      <h1 class="second-title">Type Of Donation</h1>
-      <div class="form-row type">
-        <p>
-          <input type="radio" name="my-choice" class="radio">
-          <span class="choice span">One Time Donation</span>
-        </p>
-      </div>
-      <div class="form-row">
-        <p>
-          <input type="radio" name="my-choice" class="radio">
-          <span class="choice span">Monthly Donation</span>
-        </p>
-      </div>
-      <h1 class="second-title">Comments</h1>
-      <div class="form-row">
-        <p>
-          <textarea name="comments" class="textarea" placeholder="Write something..."></textarea>
-        </p>
-      </div>
-      <h1 class="second-title">Donation Amount *</h1>
-      <div class="form-row">
-        <p>
-          <input type="number" name="amount" class="amount" placeholder="USD" required>
-        </p>
-      </div>
-      <h1 class="second-title">Payment*</h1>
-      <div class="form-row">
-              <p>
-                <input type="text" placeholder="First Name" required>
-                <input type="text" placeholder="Last Name" required>
-              </p>
-              <p>
-                <input type="number" placeholder="Card Number" required>
-                <input type="number" placeholder="CVV" required >
-              </p>
-              <p>
-                <input type="number" placeholder="2021" min="2021">
-                <select>
-                  <option value="January">January</option>
-                  <option value="February">February</option>
-                  <option value="March">March</option>
-                  <option value="April">April</option>
-                  <option value="May">May</option>
-                  <option value="June">June</option>
-                  <option value="July">July</option>
-                  <option value="August">August</option>
-                  <option value="Septemper">Septemper</option>
-                  <option value="October">October</option>
-                  <option value="November">November</option>
-                  <option value="December">December</option>
-                </select>
-              </p>
-      </div>
-      <div>
-        <p class="agreem">
-          <input type="checkbox" required>
-          <span class="agreement">I accept the terms</span>
-        </p>
-        <p>
-          <a class="privacy" href="https://policies.google.com/privacy?hl=en-US" target="_blank">Read more</a>
-        </p>
-      </div>
-      <button class="donate">Donate</button>
-     </form>
-  </main>
-  <!-- Creating the footer -->
-    <footer class="footer">
-        <div class="l-footer">
-        <h1>
-        <a href="#"><img src="./logo/logo-01.png" alt="logo"></a></h1>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam atque recusandae in sit sunt molestiae aliquid fugit. Mollitia eaque tempore iure sit nobis? Vitae nemo, optio maiores numquam quis recusandae.</p>
-        </div>
-        <ul class="r-footer">
-        <li>
-          <h2>
-        Social</h2>
-        <ul class="box">
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Pinterest</a></li>
-        <li><a href="#">Dribbble</a></li>
+  </head>
+  <body>
+    <!-- Creating the header (nav bar and logo) -->
+    <header class="header">
+      <h1 class="logo">
+        <a href="./index.html"><img src="./logo/logo-01.png" alt="logo" /></a>
+      </h1>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <nav class="bar_tap">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./grid.html">Grid</a></li>
+          <li><a href="./flex.html">Flex</a></li>
+          <li><a href="./donation.html">Donation</a></li>
         </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span class="span1"></span>
+      </label>
+    </header>
+    <!-- Creating the form -->
+    <main class="container">
+      <h1 class="title">Donation Form</h1>
+      <form class="donation-form">
+        <h1 class="second-title">Full Name *</h1>
+        <div class="form-row">
+          <p>
+            <input
+              type="text"
+              name="fname"
+              required
+              maxlength="15"
+              placeholder="First Name"
+            />
+            <input
+              type="text"
+              name="lname"
+              required
+              maxlength="15"
+              placeholder="Last Name"
+            />
+          </p>
+        </div>
+        <h1 class="second-title">E-mail *</h1>
+        <div class="form-row">
+          <p>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="username@example.com"
+            />
+          </p>
+        </div>
+        <h1 class="second-title">Type Of Donation</h1>
+        <div class="form-row type">
+          <p>
+            <input type="radio" name="my-choice" class="radio" />
+            <span class="choice span">One Time Donation</span>
+          </p>
+        </div>
+        <div class="form-row">
+          <p>
+            <input type="radio" name="my-choice" class="radio" />
+            <span class="choice span">Monthly Donation</span>
+          </p>
+        </div>
+        <h1 class="second-title">Comments</h1>
+        <div class="form-row">
+          <p>
+            <textarea
+              name="comments"
+              class="textarea"
+              placeholder="Write something..."
+            ></textarea>
+          </p>
+        </div>
+        <h1 class="second-title">Donation Amount *</h1>
+        <div class="form-row">
+          <p>
+            <input
+              type="number"
+              name="amount"
+              class="amount"
+              placeholder="USD"
+              required
+            />
+          </p>
+        </div>
+        <h1 class="second-title">Payment*</h1>
+        <div class="form-row">
+          <p>
+            <input type="text" placeholder="First Name" required />
+            <input type="text" placeholder="Last Name" required />
+          </p>
+          <p>
+            <input type="number" placeholder="Card Number" required />
+            <input type="number" placeholder="CVV" required />
+          </p>
+          <p>
+            <input type="number" placeholder="2021" min="2021" />
+            <select>
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="Septemper">Septemper</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+          </p>
+        </div>
+        <div>
+          <p class="agreem">
+            <input type="checkbox" required />
+            <span class="agreement">I accept the terms</span>
+          </p>
+          <p>
+            <a
+              class="privacy"
+              href="https://policies.google.com/privacy?hl=en-US"
+              target="_blank"
+              >Read more</a
+            >
+          </p>
+        </div>
+        <button class="donate">Donate</button>
+      </form>
+    </main>
+    <!-- Creating the footer -->
+    <footer class="footer">
+      <div class="l-footer">
+        <h1>
+          <a href="#"><img src="./logo/logo-01.png" alt="logo" /></a>
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+          atque recusandae in sit sunt molestiae aliquid fugit. Mollitia eaque
+          tempore iure sit nobis? Vitae nemo, optio maiores numquam quis
+          recusandae.
+        </p>
+      </div>
+      <ul class="r-footer">
+        <li>
+          <h2>Social</h2>
+          <ul class="box">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">Dribbble</a></li>
+          </ul>
         </li>
         <li class="features">
-          <h2>
-        Information</h2>
-        <ul class="box h-box">
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Sales</a></li>
-        <li><a href="#">Tickets</a></li>
-        <li><a href="#">Certifications</a></li>
-        <li><a href="#">Customer Service</a></li>
-        </ul>
+          <h2>Information</h2>
+          <ul class="box h-box">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Sales</a></li>
+            <li><a href="#">Tickets</a></li>
+            <li><a href="#">Certifications</a></li>
+            <li><a href="#">Customer Service</a></li>
+          </ul>
         </li>
         <li>
-          <h2>
-        Legal</h2>
-        <ul class="box">
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Use</a></li>
-        <li><a href="#">Contract</a></li>
-        </ul>
+          <h2>Legal</h2>
+          <ul class="box">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contract</a></li>
+          </ul>
         </li>
-        </ul>
-        <div class="b-footer">
-        <p>
-        All rights reserved by ©CompanyName 2021 </p>
-        </div>
-        </footer>
-        
-</body>
+      </ul>
+      <div class="b-footer">
+        <p>All rights reserved by ©CompanyName 2021</p>
+      </div>
+    </footer>
+  </body>
 </html>
