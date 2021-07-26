@@ -1,8 +1,10 @@
+/* This CSS for the index page */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+/* General styling */
 h1 {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -21,17 +23,7 @@ p {
   margin: 2em auto;
   color: rgb(1, 35, 73);
 }
-.my-grid {
-  margin: 20px 0;
-}
-.my-grid > * {
-  display: inline-grid;
-  align-content: center;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 900;
-  justify-content: center;
-}
+/* Styling the grid example */
 .he {
   grid-area: header;
 }
@@ -47,19 +39,16 @@ p {
 .my-grid footer {
   grid-area: footer;
 }
-.flex-example {
-  background-color: rgb(1, 35, 73);
-  display: flex;
-  align-content: center;
-  padding: 12px 0;
-  justify-content: space-around;
+.my-grid {
   margin: 20px 0;
 }
-.flex-example > div {
-  padding: 4px 20px;
+.my-grid > * {
+  display: inline-grid;
+  align-content: center;
   color: #fff;
   font-size: 20px;
   font-weight: 900;
+  justify-content: center;
 }
 .grid-wrapper-example {
   display: grid;
@@ -75,6 +64,22 @@ p {
 .grid-wrapper-example > * {
   background-color: rgb(1, 35, 73);
 }
+/* Styling the flex example */
+.flex-example {
+  background-color: rgb(1, 35, 73);
+  display: flex;
+  align-content: center;
+  padding: 12px 0;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.flex-example > div {
+  padding: 4px 20px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+}
+/* Styling the page for small screens using the media */
 @media screen and (max-width: 600px) {
   main .main {
     display: flex;

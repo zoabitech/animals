@@ -1,9 +1,9 @@
+/* This is the main CSS (general style) for all the pages */
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
-
+/* General style */
 :root {
   --background: #012349;
 }
-
 *,
 *::before,
 *::after {
@@ -14,6 +14,10 @@ body {
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   background-color: rgba(189, 144, 86, 0.7);
+}
+h2 {
+  font-weight: 400;
+  font-size: 15px;
 }
 /* navigation styles start here */
 .title {
@@ -31,18 +35,15 @@ body {
   width: 100%;
   top: 0;
 }
-/* changed this from the tutorial video to
-   allow it to gain focus, making it tabbable */
+/* Styling the nav bar / the header */
 .nav-toggle {
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
 }
-
 .nav-toggle:focus ~ .nav-toggle-label {
   outline: 3px solid rgba(lightblue, 0.75);
 }
-
 .nav-toggle-label {
   position: absolute;
   top: 0;
@@ -52,7 +53,6 @@ body {
   display: flex;
   align-items: center;
 }
-
 .nav-toggle-label .span1,
 .nav-toggle-label .span1::before,
 .nav-toggle-label .span1::after {
@@ -69,15 +69,20 @@ body {
   content: "";
   position: absolute;
 }
-
 .nav-toggle-label .span1::before {
   bottom: 7px;
 }
-
 .nav-toggle-label .span1::after {
   top: 7px;
 }
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
 
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
 .bar_tap {
   position: absolute;
   text-align: left;
@@ -89,18 +94,15 @@ body {
   transform-origin: top;
   transition: transform 400ms ease-in-out;
 }
-
 .bar_tap ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 .bar_tap li {
   margin-bottom: 1em;
   margin-left: 1em;
 }
-
 .bar_tap a {
   color: white;
   text-decoration: none;
@@ -109,70 +111,15 @@ body {
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
-
 .bar_tap a:hover {
   border-radius: 10px;
   padding: 0.5rem;
   color: #fff;
-  /* border: 2px solid rgba(189, 144, 86, 1); */
   border: 2px solid #fff;
-  /* background-color: rgba(189, 144, 86, 1); */
   transition: 0.7s;
   font-weight: 900;
 }
-
-.nav-toggle:checked ~ nav {
-  transform: scale(1, 1);
-}
-
-.nav-toggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
-}
-
-@media screen and (min-width: 800px) {
-  .nav-toggle-label {
-    display: none;
-  }
-
-  .header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-  }
-
-  .logo {
-    grid-column: 2 / 3;
-  }
-
-  .bar_tap {
-    all: unset;
-    position: relative;
-    text-align: left;
-    transition: none;
-    transform: scale(1, 1);
-    background: none;
-    top: initial;
-    left: initial;
-    grid-column: 3 / 4;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .bar_tap ul {
-    display: flex;
-  }
-
-  .bar_tap li {
-    margin-left: 3em;
-    margin-bottom: 0;
-  }
-
-  .bar_tap a {
-    opacity: 1;
-    position: relative;
-  }
-}
+/* Styling the main */
 main {
   display: flex;
   flex-direction: column;
@@ -185,6 +132,7 @@ main {
   margin-right: auto;
   margin-bottom: 10rem;
 }
+/* Styling the figcaption */
 figcaption {
   position: absolute;
   opacity: 0;
@@ -204,6 +152,7 @@ figcaption:hover {
   background-color: rgba(0, 0, 0, 0.5);
   transition: 0.5s;
 }
+/* The footer style starts here */
 .footer {
   display: flex;
   flex-flow: row wrap;
@@ -217,10 +166,6 @@ figcaption:hover {
 .l-footer {
   margin-right: 1.25em;
   margin-bottom: 2em;
-}
-h2 {
-  font-weight: 400;
-  font-size: 15px;
 }
 .footer ul {
   list-style: none;
@@ -256,6 +201,7 @@ h2 {
   padding-right: 20%;
   color: #fff;
 }
+/* Making a responsive page for smaller screens */
 @media screen and (min-width: 600px) {
   .r-footer > * {
     flex: 1;
@@ -273,6 +219,41 @@ h2 {
     padding: 10px;
     font-size: 0.5rem;
     margin-top: 5rem;
+  }
+  .nav-toggle-label {
+    display: none;
+  }
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  .logo {
+    grid-column: 2 / 3;
+  }
+  .bar_tap {
+    all: unset;
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1, 1);
+    background: none;
+    top: initial;
+    left: initial;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .bar_tap ul {
+    display: flex;
+  }
+  .bar_tap li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  .bar_tap a {
+    opacity: 1;
+    position: relative;
   }
 }
 @media screen and (max-width: 600px) {
